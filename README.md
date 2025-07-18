@@ -56,8 +56,11 @@ This project follows the classic 3-tier design pattern:
 application code/
 
 ├── web-tier/ # Static frontend files (HTML/CSS/JS)
+
 ├── app-tier/ # Backend application code (Flask/Node)
+
 ├── nginx.conf # Reverse proxy configuration
+
 ├── .github/workflows/ # GitHub Actions pipeline definition
 
  
