@@ -2,21 +2,21 @@
 
 Designed and deployed a highly available and scalable three-tier web architecture on AWS using best practices for performance, security, fault tolerance, and cost optimization.
 
-## 🧩 Architecture Overview
+ 🧩 Architecture Overview
 
 This project follows the classic 3-tier design pattern:
 
-- 🔹 **Presentation Layer (Frontend)**  
-  - Hosted on Amazon S3 (static website hosting)  
-  - Secured and accelerated using Amazon CloudFront (CDN)  
-  - Custom domain setup via Route 53  
+ 🔹 **Presentation Layer (Frontend)**  
+  - Static website hosted on Amazon S3
+  - Public access secured with S3 Bucket Policies
+  - Website accessible via S3 endpoint or custom domain 
 
-- 🔹 **Application Layer (Backend)**  
+  🔹 **Application Layer (Backend)**  
   - Hosted on EC2 instances inside an Auto Scaling Group (ASG)  
   - Load balanced using an Application Load Balancer (ALB)  
   - Managed using custom launch templates and IAM roles  
 
-- 🔹 **Database Layer**  
+ 🔹 **Database Layer**  
   - Managed MySQL database on Amazon RDS  
   - Multi-AZ deployment with automatic backups and failover  
 
@@ -35,19 +35,13 @@ This project follows the classic 3-tier design pattern:
 
 ✅ Security :
 - IAM Roles & Policies
-- AWS WAF & Shield
-- SSL/TLS with HTTPS (via CloudFront/ALB)
+- SSL/TLS with HTTPS (ALB)
 - Principle of Least Privilege (PoLP)
 
-✅ Monitoring & Logging :
-- CloudWatch for metrics & logs
-- CloudTrail for API auditing
-
 ✅ Automation & DevOps :
-- Infrastructure as Code using Terraform
-- GitHub Actions for CI/CD pipeline
-- Linux Shell Scripting
-- AWS Lambda (optional components/functions)
+- Linux Shell Scripting for instance configuration and deployment tasks
+- Manual setup of infrastructure using AWS Console and CLI
+- AWS Lambda 
 
 🚀 Features Implemented :
 -  Highly available and auto-scaled EC2-based app tier
